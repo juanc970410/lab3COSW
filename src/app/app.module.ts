@@ -10,6 +10,8 @@ import {TaskListPageComponent}from './pages/task-list-page/task-list-page.compon
 import { TaskEditPageComponent}from './pages/task-edit-page/task-edit-page.component';
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {UserListPageComponent}from './pages/user-list-page/user-list-page.component';
+import {UserEditPageComponent}from './pages/user-edit-page/user-edit-page.component';
+import {SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 
 import {NgbModule}from '@ng-bootstrap/ng-bootstrap';
 
@@ -23,10 +25,11 @@ import {TodoService}from './services/todo.service';
 import {UserService}from './services/users.service';
 
 const ROUTES = [
-{path: '', component: HomePageComponent},
+{ path: '', component: SignInPageComponent },
 {path: 'tasks', component: TaskListPageComponent},
 {path: 'edit', component: TaskEditPageComponent },
 {path: 'users', component: UserListPageComponent },
+{path: 'editUsers', component: UserEditPageComponent },
 {path: '**', component: PageNotFoundComponent}]
 
 @NgModule({
@@ -36,14 +39,17 @@ const ROUTES = [
     TaskListPageComponent,
     TaskEditPageComponent,
     PageNotFoundComponent,
-    UserListPageComponent
+    UserListPageComponent,
+    UserEditPageComponent,
+    SignInPageComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(ROUTES),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [
     {
