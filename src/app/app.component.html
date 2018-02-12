@@ -17,13 +17,22 @@
                 <a class="nav-link" routerLinkActive="/edit" routerLink="/edit">Edit</a>
             </li>
         </ul>
-        <form (ngSubmit) = "message()" class="form-inline my-2 my-lg-0" #navFrom="ngForm">
+        <form class="form-inline my-2 my-lg-0" #navFrom="ngForm">
             <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="search(modal)">Search</button>
         </form>
     </div>
 </nav>
-
 <div class="container">
     <router-outlet></router-outlet>
 </div>
+<ng-template #modal id="modal">
+    <div class="modal-header" ng-model="modal">
+        <h4 class="modal-title">Ooops!</h4>
+    </div>
+    <div class="modal-body" >
+        This feature is not implemented yet. Sorry for the inconvenience
+    </div>
+</ng-template>
+
+
