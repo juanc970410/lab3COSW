@@ -35,7 +35,7 @@ export class UserEditPageComponent implements OnInit {
       this.userForm.get('image').value
     );
 
-    this.router.navigate(['/tasks']);
+    this.router.navigate(['/users']);
   }
 
 }

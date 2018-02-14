@@ -11,7 +11,7 @@ import { TaskEditPageComponent}from './pages/task-edit-page/task-edit-page.compo
 import {PageNotFoundComponent} from './pages/page-not-found/page-not-found.component';
 import {UserListPageComponent}from './pages/user-list-page/user-list-page.component';
 import {UserEditPageComponent}from './pages/user-edit-page/user-edit-page.component';
-import {SignInPageComponent } from './pages/sign-in/sign-in-page.component';
+import { SignInPageComponent } from './pages/sign-in/sign-in-page.component';
 
 import {NgbModule}from '@ng-bootstrap/ng-bootstrap';
 
